@@ -1,0 +1,6 @@
+include "Javascript_exploit_and_obfuscation.yar"
+include "JJencode.yar"
+include "packer.yar"
+include "packer_compiler_signatures.yar"
+include "peid.yar"
+include "tweetable-polyglot-png.yar"
