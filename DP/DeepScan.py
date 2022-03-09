@@ -4,14 +4,12 @@ Created on Sun Jan 23 20:33:30 2022
 
 @author: kimse
 
-안녕하세요!!! 
-이번에 제가 직접 AntiVirus를 제작하고 있습니다.
-검사 시간이 상당하지만... 최적화 및 다양한 기능을 구축할 수 있도록 하겠습니다.
+Hello!
+This time, I'm producing AntiVirus myself.
+Although the inspection time is considerable, 
+I will make it possible to optimize and build various functions.
 """
-from SOURCE import update_AV
-from SOURCE import log_manage
-from SOURCE import malscan
-
+from SOURCE import shell_AV
 
 title =  """ ______                         ______                      \n"""                     
 title += """(______)                       / _____)                     \n"""                     
@@ -23,18 +21,8 @@ title += """                       |_|                                  \n"""
 
 
 print(title)
-print("동작을 선택해 주세요.")
-print("1. 검사   2. 업데이트 확인  3. 로그 추출")
-
-operation = int(input("-> "))
+print("If you don't know how to use it, please enter help.^^")
+shell_AV.command_SHELL()
 
 
-if(operation == 1):
-    malscan.Malware_check()
-
-elif(operation == 2):
-    update_AV.conduct_UPDATE()
-
-elif(operation == 3):
-    log_manage.Extraction()
     
