@@ -5,35 +5,31 @@ Created on Wed Mar  9 21:40:52 2022
 @author: kimse
 옵션에 대한 인자는 해당 명령어에서 따로 입력 받도록 항.
 """
-
+from Command import help_command, malscan, update_AV, log_manage, Rule
     
 def command_SHELL():
     while(True):
         input_text = input("DP_av>> ")
         command = Ex_command(input_text)
         option = Ex_option(input_text)
-        
-        print(command)
-        print(option)
+
         
         if(command == "scan"):
-            print("1")
-            #malscan.Malware_check(option, argument)
-        
+            malscan.Malware_check(option)
+            
         
         elif(command == "update"):
-            print("2")
-            #update_AV.conduct_UPDATE(option, argument)
-        
+            update_AV.conduct_UPDATE(option)
+            
+        elif(command == "rule"):
+            Rule.management(option)
         
         elif(command == "log"):
-            print("3")
-            #log_manage.Extraction(option, argument)
+            log_manage.Extraction(option)
             
             
         elif(command == "help"):
-            print("4")
-            #help_command.explan()
+            help_command.explan()
         
         
         elif(command == "exit"):
